@@ -37,6 +37,18 @@ I hope you enjoy your Neovim journey,
 
 P.S. You can delete this when you're done too. It's your config now :)
 --]]
+--
+--Tab and line settings
+local tabSize = 4
+local set = vim.opt
+local line = vim.wo
+
+set.tabstop = tabSize
+set.softtabstop = tabSize
+set.shiftwidth = tabSize
+
+line.nu = true
+line.rnu = true
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -175,7 +187,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'palenight',
         component_separators = '|',
         section_separators = '',
       },
